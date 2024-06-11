@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'news.dart';
 import 'news_bloc.dart';
 import 'news_event.dart';
 import 'news_state.dart';
-import 'news.dart';
 import 'user_page.dart';
 
 class NewsPage extends StatefulWidget {
@@ -111,7 +112,7 @@ class _NewsPageState extends State<NewsPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.teal, // Color del ítem seleccionado
+        selectedItemColor: Colors.grey, // Color del ítem seleccionado
         unselectedItemColor: Colors.grey, // Color del ítem no seleccionado
         onTap: (index) {
           setState(() {
@@ -122,7 +123,7 @@ class _NewsPageState extends State<NewsPage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Locales',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.public),

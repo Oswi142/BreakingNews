@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "291480865463",
+    "project_id": "breakingnews-b4ae9",
+    "storage_bucket": "breakingnews-b4ae9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291480865463:android:232272193575fd8b74db32",
+        "android_client_info": {
+          "package_name": "com.example.news_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmot3E_70WblFQg9WfUtixLIbvulor_Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

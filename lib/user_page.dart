@@ -17,9 +17,10 @@ class UserPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CircleAvatar(
-                radius: 60,
-                backgroundImage: AssetImage('assets/default_avatar.png'),
+              const Icon(
+                Icons.account_circle,
+                size: 120,
+                color: Colors.teal, // Color teal para el icono de usuario
               ),
               const SizedBox(height: 16),
               Card(

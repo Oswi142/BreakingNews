@@ -2,26 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'news_bloc.dart';
 import 'news_repository.dart';
-import 'news_page.dart';
-import 'news.dart';
+import 'login_page.dart'; // Importa la página de login
 
 void main() {
   runApp(
-    BlocProvider(
-      create: (_) => NewsBloc(NewsRepository()),
-      child: const MyApp(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<NewsBloc>(
+          create: (_) => NewsBloc(NewsRepository()),
+        ),
+        // Puedes agregar más BlocProviders aquí si los necesitas en tu app
+      ],
+      child: MaterialApp(
+        title: 'Breaking News',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: LoginPage(), // Redirige a la página de login al iniciar la app
+      ),
     ),
   );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'News App',
-      home: const NewsPage(newsType: NewsType.local),
-    );
-  }
 }
